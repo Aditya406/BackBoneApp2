@@ -1,4 +1,4 @@
-<div class="container-fluid" id="suessdiv1">
+<div class="container-fluid">
 <table class="table" id="myTable" border="1">
 <thead>
 <tr>
@@ -7,12 +7,12 @@
   <th>Email</th>
 </tr>
 </thead>
-<tbody id="table-body"></tbody>
+<tbody id="table-body">
+<% _.each(data,function(val){%>
+<td> <%=val.username%> </td>
+<td><%=val.password%> </td>
+<td><%=val.email%> </td>
+<%})%>
+</tbody>
 </table>
 </div>
-
-<script type="text/template" id="teacher-template">
-<td><%= username %></td>
-<td><%= password %></td>
-<td><%= email %></td>
-</script>  

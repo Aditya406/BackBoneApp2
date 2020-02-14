@@ -7,7 +7,7 @@ define([
 ],function($, _, Backbone,UserdataCollection,userdatatemplate){
  //View
 	var UserView = Backbone.View.extend({
-		el:'#suessdiv1',
+		el:'#suessdiv',
 		initialize: function () {
 			this.render();
 		},
@@ -15,10 +15,16 @@ define([
 		render : function() {
 			var that = this;	
 			template = _.template(userdatatemplate);
-				$("#suessdiv").empty();
-				that.$el.append(template);
-				this.$el.html();
-			  return that;
+			
+			var cls = new UserdataCollection()
+			cls.save({
+				success : function(response) {
+			var data=JSON.parse(response);
+			var finalData = data.data
+						$("#suessdiv").empty();
+						 that.$el.append(template({data:finalData}));
+				},
+			});
 			
 		},
 		

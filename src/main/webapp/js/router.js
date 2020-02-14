@@ -9,7 +9,7 @@ var AppRouter = Backbone.Router.extend({
 	routes : {
 		"register" : "registerView",
 		"login"    : "indexView",
-		"userdata1" : "userdataViwe"
+		"userdata" : "userdataViwe"
 	},
 	registerView : function() {
 		require([ "views/register" ], function(register) {
@@ -23,7 +23,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 	
 	userdataViwe : function(e) {
-		require([ "views/userdata" ], function(userdata) {
+		require(["views/userdata"], function(userdata) {
           new userdata()
 		});
 	}
