@@ -26,7 +26,7 @@ define([
 				},
 			});
 			
-		},
+		}, 
 		
 		 events : {
 	            "click #userdata" : "adddata"
