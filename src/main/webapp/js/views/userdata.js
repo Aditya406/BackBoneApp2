@@ -37,10 +37,10 @@ define([
 			
 			edituser : function(e) {
 				event.preventDefault()
-			var name=e.currentTarget.getAttribute("value");
+			var a_id=e.currentTarget.getAttribute("value");
 				console.log("hiii");
 				require(["views/edit"], function(edit) {
-			          new edit({name:name})
+			          new edit({name:a_id+""})
 					});
 			
 			}

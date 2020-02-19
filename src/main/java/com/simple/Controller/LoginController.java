@@ -40,16 +40,16 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = "/getuserdata",method = RequestMethod.POST)
-	public @ResponseBody String getdata(@RequestParam("username") String username, HttpServletRequest request,
+	public @ResponseBody String getdata(@RequestParam("a_id") String a_id, HttpServletRequest request,
 			HttpServletResponse response) {
 		/* System.out.println("Aditya 146"); */
-		return service.getuser(username);
+		return service.getuser(a_id);
 	}
 	
 	@RequestMapping(value = "/saveupdate",method = RequestMethod.POST)
-	public @ResponseBody String updatedata(@RequestParam("username") String username, HttpServletRequest request,HttpServletResponse response) {
+	public @ResponseBody String updatedata(@RequestParam("a_id")Integer a_id,@RequestParam("username") String username,@RequestParam("email") String email, HttpServletRequest request,HttpServletResponse response) {
 		System.out.println("Aditya 146789");
-		return service.updateuser(username);
+		return service.updateuser(a_id,username,email);
 	}
 
 }

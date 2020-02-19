@@ -30,12 +30,13 @@ public JSONArray getall() {
 	
 }
 
-public String getuser(String username) {
+public String getuser(String a_id) {
 
-	return dao.getuser(username);
+	return dao.getuser(a_id);
 }
 
-public String updateuser(String username) {
-	return dao.updateuser(username);
+public String updateuser(Integer a_id,String username,String email) {
+	return dao.updateuser(a_id,username,email);
 }
+
 }

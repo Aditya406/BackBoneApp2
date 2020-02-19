@@ -1,9 +1,18 @@
 package com.simple;
 
 public class Account {
+	private Integer id;
 	 private String username;
 	  private String email;
 	  private String password;
+	  
+	  public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
+	  
 	public String getUserName() {
 		return username;
 	}
@@ -26,8 +35,9 @@ public class Account {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Account(String username, String email, String password) {
+	public Account(Integer id,String username, String email, String password) {
 		super();
+		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.password = password;

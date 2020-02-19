@@ -5,7 +5,7 @@ define([ 'jquery', 'underscore', 'backbone','collection/EditCollection','collect
 	var UserView = Backbone.View.extend({
 		el:'.userdiv',
 		initialize: function (options) {
-			this.username=options.name
+			this.a_id=options.name
 			this.render();
 		},
 		events : {
@@ -19,13 +19,15 @@ define([ 'jquery', 'underscore', 'backbone','collection/EditCollection','collect
 					var template = _.template(edittemplate);
 					that.$el.html(template({data:response.toJSON()}));
 				},
-				data : $.param({username : that.username}),
+				data : $.param({a_id : that.a_id}),
 			});
 		},
 		updateuser : function(e) {
+			var self = {};
 			var that = this;
 			e.preventDefault();
 			var ulc = new UpdateCollection ()
+			/*self.a_id = $('#a_id').val(),*/
 			self.username = $('#username').val(),
 			self.email = $('#email').val(),
 			ulc.save({},{
@@ -33,12 +35,16 @@ define([ 'jquery', 'underscore', 'backbone','collection/EditCollection','collect
 					if (response.attributes.success == true) {
 						$('.editdata').html("update successfully done").css(
 								"color", "green"); 
+						/*$('#a_id').val("")*/
 						$('#username').val("")
 						$('#email').val("")
 					}
 				},
 				
+				data : $.param({a_id:that.a_id,username : self.username,email :self.email}),
 			});
+			
+		
 
 		}
 	});

@@ -2,6 +2,7 @@
 <table class="table" id="myTable" style="width:50%; float:left">
 <thead>
 <tr>
+<th>ID</th>
   <th>UserName</th>
  <!--  <th>Password</th> -->
   <th>Email</th>
@@ -11,10 +12,11 @@
 <tbody id="table-body">
 <% _.each(data,function(val){%>
 <tr>
+<td><%=val.a_id%></td>
 <td><%=val.username%></td>
 <!-- <td><%=val.password%></td> -->
 <td><%=val.email%></td>
-<td><button class="btn btn-primary"><span class="glyphicon glyphicon-pencil" value="<%=val.username%>"  id="edit">edit</span></button></td>
+<td><button class="btn btn-primary"><span class="glyphicon glyphicon-pencil" value="<%=val.a_id%>"  id="edit">edit</span></button></td>
 </tr>
 <%})%>
 </tbody>
