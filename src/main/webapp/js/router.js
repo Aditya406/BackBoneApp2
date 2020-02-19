@@ -26,7 +26,7 @@ var AppRouter = Backbone.Router.extend({
 		require(["views/userdata"], function(userdata) {
           new userdata()
 		});
-	}
+	},
 });
 
 var appRouter = new AppRouter();

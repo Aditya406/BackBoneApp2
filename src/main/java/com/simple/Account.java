@@ -7,7 +7,7 @@ public class Account {
 	public String getUserName() {
 		return username;
 	}
-	public void setUserName(String userName) {
+	public void setUserName(String username) {
 		this.username = username;
 	}
 	public String getEmail() {
@@ -32,10 +32,9 @@ public class Account {
 		this.email = email;
 		this.password = password;
 	}
-	@Override
-	public String toString() {
-		return "Account [username=" + username + ", email=" + email + ", password=" + password + "]";
-	}
-	
+	/*
+	 * @Override public String toString() { return "Account [username=" + username +
+	 * ", email=" + email + ", password=" + password + "]"; }
+	 */
 
 }

@@ -1,0 +1,24 @@
+<form class="edit-form" role="form" style="width:50%; float:right">
+<% var group=data %>
+<div class="container">
+		<h5>Edit Form</h5>
+	<div class="form-group">
+		<div class="form-group">
+		<input type="username" class="form-control" name="username"  value="<%=group.username%>" id="username"
+			placeholder="Name" required="required">
+	</div>
+	</div>
+	<div class="form-group">
+		<input type="email" class="form-control" name="email" value="<%=group.email%>" id="email"
+			placeholder="Email" required="required">
+	</div>
+	<!-- <div class="form-group">
+		<input type="password" class="form-control" name="password"  id="password"
+			placeholder="Password" required="required">
+	</div> -->
+	<div class="form-group">
+		<button type="submit"  id="update" class="btn btn-success btn-lg btn-block">Update</button>
+	</div>
+	<div class="editdata"></div>
+	</div>
+</form>

@@ -47,10 +47,13 @@ define([
 					if (response.attributes.success == true) {
 						$('.reg').html(" Register successfully done ").css(
 								"color", "green"); 
+						$('#username').val("")
+						$('#email').val("")
+						$('#password').val("")
 					}
-					else{
+					/*else{
 						$('.reg').html("user alredy existed").css("color","red");
-					} 
+					} */
 				},
 				data : $.param({username : self.username,email :self.email, password : self.password }),
 			});

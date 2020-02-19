@@ -1,18 +1,23 @@
 <div class="container-fluid">
-<table class="table" id="myTable" border="1">
+<table class="table" id="myTable" style="width:50%; float:left">
 <thead>
 <tr>
   <th>UserName</th>
-  <th>Password</th>
+ <!--  <th>Password</th> -->
   <th>Email</th>
+  <th>Edit</th>
 </tr>
 </thead>
 <tbody id="table-body">
 <% _.each(data,function(val){%>
-<td> <%=val.username%> </td>
-<td><%=val.password%> </td>
-<td><%=val.email%> </td>
+<tr>
+<td><%=val.username%></td>
+<!-- <td><%=val.password%></td> -->
+<td><%=val.email%></td>
+<td><button class="btn btn-primary"><span class="glyphicon glyphicon-pencil" value="<%=val.username%>"  id="edit">edit</span></button></td>
+</tr>
 <%})%>
 </tbody>
+<div class="userdiv"></div>
 </table>
 </div>

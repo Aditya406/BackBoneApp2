@@ -14,6 +14,8 @@ function($, _, Backbone) {
 			"click #login"    : "index",
 			"click #register" : "register",
 			"click #userdata" : "userdata",
+			"click #edit"     : "edituser"
+				
 		},
 		initialize : function(options) {
 			this.render();
@@ -32,7 +34,12 @@ function($, _, Backbone) {
 		userdata : function(e) {
 			 var href = "userdata";
 		Backbone.history.navigate(href, true);
+		},
+		edituser : function(e) {
+			 var href = "edit";
+		Backbone.history.navigate(href, true);
 		}
+	
 	});
 	var userview = new UserView();
 });
